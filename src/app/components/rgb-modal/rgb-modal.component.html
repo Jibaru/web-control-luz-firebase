@@ -1,0 +1,73 @@
+<!-- Modal RGB -->
+<div
+  class="modal fade"
+  id="{{ modalId }}"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+  [attr.aria-labelledby]="modalId"
+>
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h6>Cambiar RGB</h6>
+        <div class="form-group">
+          <label for="formControlRange">
+            Rojo <b>{{ foco.rojo }}</b>
+          </label>
+          <input
+            type="range"
+            class="form-control-range w-100 app-range-red"
+            id="formControlRange"
+            min="0"
+            max="255"
+            [(ngModel)]="foco.rojo"
+          />
+        </div>
+        <div class="form-group">
+          <label for="formControlRange">
+            Verde <b>{{ foco.verde }}</b>
+          </label>
+          <input
+            type="range"
+            class="form-control-range w-100"
+            id="formControlRange"
+            min="0"
+            max="255"
+            [(ngModel)]="foco.verde"
+          />
+        </div>
+        <div class="form-group">
+          <label for="formControlRange">
+            Amarillo <b>{{ foco.amarillo }}</b>
+          </label>
+          <input
+            type="range"
+            class="form-control-range w-100"
+            id="formControlRange"
+            min="0"
+            max="255"
+            [(ngModel)]="foco.amarillo"
+          />
+        </div>
+        <div
+          style="height: 50px"
+          [style.background-color]="
+            'rgb(' + foco.rojo + ',' + foco.verde + ',' + foco.amarillo + ')'
+          "
+        ></div>
+        <div class="form group text-center mt-2">
+          <button class="btn btn-primary" (click)="cambiarRGB()">
+            Aceptar
+          </button>
+        </div>
+      </div>
+      <div
+        *ngIf="mensajeActualizado != ''"
+        class="text-center p-2 bg-dark text-white"
+      >
+        {{ mensajeActualizado }}
+      </div>
+    </div>
+  </div>
+</div>

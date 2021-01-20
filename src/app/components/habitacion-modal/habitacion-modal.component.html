@@ -1,0 +1,49 @@
+<div
+  class="modal fade"
+  id="{{ modalId }}"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div
+        class="modal-body p-0 position-relative"
+        style="
+          background-image: url('./assets/img/background.jpg');
+          width: 100%;
+          height: 450px;
+        "
+      >
+        <div
+          *ngFor="let foco of habitacion.focos"
+          class="position-absolute"
+          [style.top.%]="foco.posX"
+          [style.left.%]="foco.posY"
+        >
+          <app-foco-boton [foco]="foco"></app-foco-boton>
+        </div>
+
+        <div class="position-absolute" style="top: 10px; right: 10px">
+          <button
+            class="app-floating-btn bg-white text-dark"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            X
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <h1 style="display: inline-block">{{ habitacion.nombre }}</h1>
+          <p>
+            {{ habitacion.descripcion }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
