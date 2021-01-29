@@ -11,18 +11,27 @@ export class AuthService {
 
   constructor(
     private _angularFireAuth: AngularFireAuth
-  ) { }
+  ) { 
+    this._autenticado = localStorage.getItem('autenticado') != null;
+  }
 
   async iniciarSesion(datos: IniciarSesionRequest): Promise<any> {
     try {
       const resp = await this._angularFireAuth
         .signInWithEmailAndPassword(datos.usuario, datos.clave);
       this._autenticado = true;
+      localStorage.setItem('autenticado', 'true');
       return this._autenticado;
     } catch (err) {
       this._autenticado = false;
+      localStorage.removeItem('autenticado');
       return this._autenticado;
     }
+  }
+
+  cerrarSesion(): void {
+    this._autenticado = false;
+    localStorage.removeItem('autenticado');
   }
 
   get estaAutenticado(): boolean {
