@@ -9,7 +9,10 @@ import { BarraNavegacionComponent } from './components/barra-navegacion/barra-na
 import { HabitacionComponent } from './components/habitacion/habitacion.component';
 import { HabitacionModalComponent } from './components/habitacion-modal/habitacion-modal.component';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { environment } from 'src/environments/environment';
 
@@ -33,9 +36,12 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [HabitacionService, FocoService],
   bootstrap: [AppComponent],
