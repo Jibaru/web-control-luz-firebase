@@ -19,9 +19,11 @@ export class FocoBotonComponent implements OnInit {
       .setFocoEstado(this.foco.$key, !this.foco.encendido)
       .then((_) => {
         this.foco.encendido = !this.foco.encendido;
+        this.foco.amarillo = this.foco.encendido ? 255 : 0;
+        this.foco.rojo = this.foco.encendido ? 255 : 0;
+        this.foco.verde = this.foco.encendido ? 255 : 0;
       });
   }
 
-  cerrarModal(): void {
-  }
+  cerrarModal(): void {}
 }
