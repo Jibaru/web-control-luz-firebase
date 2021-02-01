@@ -18,6 +18,6 @@ export class BarraNavegacionComponent implements OnInit {
 
   cerrarSesion(): void {
     this._authService.cerrarSesion();
-    window.location.replace("/iniciar-sesion");
+    window.location.replace("/");
   }
 }
