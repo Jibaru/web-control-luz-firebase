@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
   {
     path: 'principal',
     component: PrincipalComponent,
+    canActivate: [AuthGuard]
   },
   { path: '', redirectTo: '/iniciar-sesion', pathMatch: 'full' },
 ];
