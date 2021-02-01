@@ -9,3 +9,4 @@ app.get("/", function (req, res) {
     path.join(__dirname + "/dist/web-control-luz-firebase/index.html")
   );
 });
+app.listen(process.env.PORT || 8080);
