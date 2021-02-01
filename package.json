@@ -16,7 +16,6 @@
     "npm": "6.4.1"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@angular-devkit/build-angular": "~0.1100.4",
     "@angular/cli": "~11.0.4",
     "@angular/compiler-cli": "~11.0.4",
@@ -35,9 +34,6 @@
     "tslint": "~6.1.0",
     "typescript": "~4.0.2",
     "@angular/animations": "~11.0.4",
-=======
-    "@angular/animations": "^11.0.9",
->>>>>>> 5bb7502f3e4f6f9db2ddb90358de862a4ec2d8ef
     "@angular/common": "~11.0.4",
     "@angular/compiler": "~11.0.4",
     "@angular/core": "~11.0.4",
@@ -49,11 +45,7 @@
     "bootstrap": "^5.0.0-beta1",
     "express": "^4.17.1",
     "firebase": "^8.2.3",
-<<<<<<< HEAD
     "path": "^0.12.7",
-=======
-    "ngx-toastr": "^13.2.0",
->>>>>>> 5bb7502f3e4f6f9db2ddb90358de862a4ec2d8ef
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
