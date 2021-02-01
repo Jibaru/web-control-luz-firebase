@@ -1,10 +1,11 @@
-<div class="position-relative" style="height: 100vh">
+<div class="position-relative pt-3" style="height: 100%">
   <div
-    class="card position-absolute top-50 start-50 translate-middle shadow mb-5 bg-white rounded"
-    style="width: 18rem"
+    class="card shadow bg-white rounded"
+    style="width: 18rem; margin-left: auto; margin-right: auto"
   >
-    <img src="./assets/img/logo_untels.webp" class="card-img-top" alt="..." />
+    <img src="./assets/img/logo_untels.webp" class="card-img-top" alt="logo" />
     <div class="card-body p-4">
+      <h3 class="text-center">IOT Hogar</h3>
       <form (submit)="iniciarSesion($event)">
         <div class="form-group">
           <label class="form-label">Usuario</label>
@@ -38,4 +39,15 @@
       </form>
     </div>
   </div>
+  <footer class="text-center mt-2 pb-3">
+    <img
+      src="./assets/img/logo-trinidad.png"
+      alt="logo-trinidad"
+      width="40px"
+    />
+    <p class="m-0">
+      <i>Ingeniería de Sistemas - Sistemas Digitales</i>
+    </p>
+    <p class="m-0">2021</p>
+  </footer>
 </div>
