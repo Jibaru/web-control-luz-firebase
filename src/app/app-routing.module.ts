@@ -14,7 +14,7 @@ const routes: Routes = [
     component: PrincipalComponent,
     canActivate: [AuthGuard]
   },
-  { path: '', redirectTo: '/iniciar-sesion', pathMatch: 'full' },
+  { path: '**', redirectTo: '/iniciar-sesion', pathMatch: 'full' },
 ];
 
 @NgModule({
